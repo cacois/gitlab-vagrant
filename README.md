@@ -5,13 +5,13 @@ This is a cookbook that allows you to run Gitlab within Vagrant with a few speci
 
 This is a 1:1 copy in chef/vagrant form of the officiall installation tutorial : https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md .
 
-The hostname: gitlab.dev
-IP Address : 10.10.10.200
-Database : Postgresql
-Postgres Password : postgrespassword
-Gitlab DB user: git
-Gitlab DB password : supersecret
-Ruby setup through rbenv: 1.9.3-p448
+- The hostname: gitlab.dev
+- IP Address : 10.10.10.200
+- Database : Postgresql
+- Postgres Password : postgrespassword
+- Gitlab DB user: git
+- Gitlab DB password : supersecret
+- Ruby setup through rbenv: 1.9.3-p448
 
 
 Installation
