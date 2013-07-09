@@ -3,7 +3,7 @@ Information
 
 This is a cookbook that allows you to run Gitlab within Vagrant with a few specifics decided for you.
 
-This is a 1:1 copy in chef/vagrant form of the officiall installation tutorial : https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md .
+This is a 1:1 copy in chef/vagrant form of the official installation tutorial : https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md .
 
 - The hostname: gitlab.dev
 - IP Address : 10.10.10.200
@@ -26,7 +26,7 @@ The tested install box was a fully updated Ubuntu Precise (64).
 
 After a few minutes the installation should be complete and available at gitlab.dev (which should be pointed to 10.10.10.200 using /etc/hosts).
 
-You can login with the following details were you will be prompted to change your password and are advised to change the username/email information.
+You can login with the following details where you will be prompted to change your password and are advised to change the username/email information.
 
 <pre><code>
   admin@local.host
