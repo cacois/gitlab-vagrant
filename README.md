@@ -1,40 +1,35 @@
 Information
 ===========
 
-This is a cookbook that allows you to run Gitlab within Vagrant with a few specifics decided for you.
-
-This is a 1:1 copy in chef/vagrant form of the official installation tutorial : https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md .
-
-- The hostname: gitlab.dev
-- IP Address : 10.10.10.200
-- Database : Postgresql
-- Postgres Password : postgrespassword
-- Gitlab DB user: git
-- Gitlab DB password : supersecret
-- Ruby setup through rbenv: 1.9.3-p448
-
+This is a Vagrant base project that gives you a functional Gitlab install. 
 
 Installation
 ============
 
 The tested install box was a fully updated Ubuntu Precise (64).
-<pre><code>
-  git clone git@github.com:chrisharper/gitlab-vagrant.git
-  cd gitlab-vagrant
-  vagrant up
-</code></pre>
 
-After a few minutes the installation should be complete and available at gitlab.dev (which should be pointed to 10.10.10.200 using /etc/hosts).
+    git clone git@github.com:cacois/gitlab-vagrant.git
+    cd gitlab-vagrant
+    vagrant up
 
-You can login with the following details where you will be prompted to change your password and are advised to change the username/email information.
+Installation will take a few minutes the first time. Once it's complete, just go to http://localhost:8080 in your browser and log in using these credentials:
 
-<pre><code>
-  admin@local.host
-  5iveL!fe
-</code></pre>
+    root
+    5iveL!fe
 
 
 Configuration
 =============
 
-Most configuration items can be altered in Vagrantfile as per standard.
+Not much you ened to do here. You can change the admin creds for gitlab by adding the following to your Vagrantfile, if you want:
+
+    chef.json = {
+      ...
+      :gitlab => {
+        :admin => {
+          :username => "<username>",
+          :password => "<password>"
+        }
+      }
+      ...
+    }
